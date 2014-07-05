@@ -13,6 +13,10 @@ package contabancaria;
 public class Conta {
     
     protected double saldo;
+    
+    /**
+     Obtem o saldo da conta
+     */
 
     public double getSaldo() {
         return this.saldo;
