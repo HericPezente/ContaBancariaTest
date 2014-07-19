@@ -12,8 +12,17 @@ package contabancaria;
  */
 public enum TipoCliente {
     
-    UNIVERSITARIO,
-    CORPORATIVO,
-    EXCLUSIVO
+    UNIVERSITARIO("Uni"),
+    CORPORATIVO("Cor"),
+    EXCLUSIVO("Exc");
+    
+    private String nome;
+    
+    TipoCliente(String nome){
+    
+        this.nome=nome;
+
+    
+    }
     
 }
