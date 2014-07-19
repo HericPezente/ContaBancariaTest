@@ -10,13 +10,15 @@ package contabancaria;
  *
  * @author i03
  */
-public class ContaCorrente extends Conta{
-    public void atualiza(double taxa){
+public abstract class ContaCorrente extends Conta{
+    /**public void atualiza(double taxa){
         this.saldo += this.saldo * taxa * 2;
-    }
+    }*/
 
+    
     public void deposita(double conta){
-        this.saldo += conta - 0.10;
+        this.saldo += conta - ContaPoupanca.VALOR_DESCONTO_DEPOSITO;
+        
     }
 
 }

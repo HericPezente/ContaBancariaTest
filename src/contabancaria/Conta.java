@@ -10,7 +10,7 @@ package contabancaria;
  *
  * @author i03
  */
-public class Conta {
+public  abstract class Conta {
     
     protected double saldo;
     
@@ -32,9 +32,19 @@ public class Conta {
 	this.saldo -= vlr_sacar;
     }
 
-    public void atualiza(double taxa){
+    /** public abstract void atualiza(double taxa){
         
 	this.saldo += this.saldo * taxa;
+    }*/
+    
+    public abstract  void atualiza(double taxa);
+    
+    public abstract double getBonificacao();
+    
+    public void mostra(){
+        System.out.println(this.getSaldo());
+        System.out.println(this.getBonificacao());
+        
     }
     
     
