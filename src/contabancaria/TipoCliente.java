@@ -19,10 +19,13 @@ public enum TipoCliente {
     private String nome;
     
     TipoCliente(String nome){
-    
         this.nome=nome;
-
-    
     }
+
+    public String getNome() {
+        return nome;
+    }
+    
+    
     
 }

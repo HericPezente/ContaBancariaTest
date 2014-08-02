@@ -15,21 +15,33 @@ public class AtualizadorDeContas {
 
 	private double selic;
 
+    
+
 	public AtualizadorDeContas(double selic){
 		this.selic=selic;
 	}
 
 	public void roda(Conta c){
 	
-		System.out.println("Saldo anterior:"+c.getSaldo());
+		imprimeSaldoAnterior(c);
 		
-		c.atualiza(this.selic);
+		c.atualiza(this.getSelic());
 
-		System.out.println("Saldo final:"+c.getSaldo());
+		imprimeSaldoAtual(c);
 
 		saldoTotal += c.getSaldo();
 
 	}
+
+        
+
+        public void imprimeSaldoAnterior(Conta c) {
+            System.out.println("Saldo anterior:"+c.getSaldo());
+        }
+        
+        public void imprimeSaldoAtual(Conta c) {
+            System.out.println("Saldo final:"+c.getSaldo());
+        }
 
 	public double getSaldoTotal(){
 		return this.saldoTotal;
@@ -39,4 +51,10 @@ public class AtualizadorDeContas {
 	public void setSaldoTotal(double saldoTotal){
 		this.saldoTotal += saldoTotal;
 	}
+        
+        public double getSelic() {
+        return selic;
+    }
+        
+        
 }
